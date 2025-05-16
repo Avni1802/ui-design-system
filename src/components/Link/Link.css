@@ -1,0 +1,114 @@
+:root,
+:host {
+    /* Primary color */
+    --tsl-link-color-primary: var(--tsl-color-text-brand);
+    --tsl-link-color-primary--hover: var(--tsl-color-text-brand-hover);
+    --tsl-link-color-primary--focused: var(--tsl-color-text-brand-hover);
+
+    /* Black color */
+    --tsl-link-color-black: var(--tsl-color-text-primary);
+    --tsl-link-color-black--hover: var(--tsl-color-text-brand);
+    --tsl-link-color-black--focused: var(--tsl-color-text-brand-hover);
+
+    /* Danger color */
+    --tsl-link-color-danger: var(--tsl-color-text-danger);
+    --tsl-link-color-danger--hover: var(--tsl-color-text-danger-hover);
+    --tsl-link-color-danger--focused: var(--tsl-color-text-danger-hover);
+
+    /* Success color */
+    --tsl-link-color-success: var(--tsl-color-text-success);
+    --tsl-link-color-success--hover: var(--tsl-color-text-success-hover);
+    --tsl-link-color-success--focused: var(--tsl-color-text-success-hover);
+
+    /* Warning color */
+    --tsl-link-color-warning: var(--tsl-color-text-warning);
+    --tsl-link-color-warning--hover: var(--tsl-color-text-warning-hover);
+    --tsl-link-color-warning--focused: var(--tsl-color-text-warning-hover);
+
+    /* white color */
+    --tsl-link-color-white: var(--tsl-color-text-inverse);
+    --tsl-link-color-white--hover: var(--tsl-color-text-inverse);
+    --tsl-link-color-white--focused: var(--tsl-color-text-inverse);
+}
+
+/* Color variants */
+
+/* Link hover and focus states */
+.tsl-link:hover:not(:disabled), .tsl-link:focus:not(:disabled) {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+}
+
+/* Primary link */
+
+.tsl-link-color-primary {
+    color: var(--tsl-link-color-primary);
+}
+.tsl-link-color-primary:hover {
+    color: var(--tsl-link-color-primary--hover);
+
+}
+.tsl-link-color-primary:focus {
+    color: var(--tsl-link-color-primary--focus);
+
+}
+
+
+/* Black link */
+.tsl-link-color-black {
+    color: var(--tsl-link-color-black);
+}
+.tsl-link-color-black:hover {
+    color: var(--tsl-link-color-black--hover);
+}
+.tsl-link-color-black:focus {
+    color: var(--tsl-link-color-black--focus);
+}
+
+/* Danger link */
+.tsl-link-color-danger {
+    color: var(--tsl-link-color-danger);
+}
+.tsl-link-color-danger:hover {
+    color: var(--tsl-link-color-danger--hover);
+}
+.tsl-link-color-danger:focus {
+    color: var(--tsl-link-color-danger--focus);
+}
+
+/* Warning link */
+.tsl-link-color-warning {
+    color: var(--tsl-link-color-warning);
+}
+.tsl-link-color-warning:hover {
+    color: var(--tsl-link-color-warning--hover);
+}
+.tsl-link-color-warning:focus {
+    color: var(--tsl-link-color-warning--focus);
+}
+
+/* Success link */
+.tsl-link-color-success {
+    color: var(--tsl-link-color-success);
+}
+.tsl-link-color-success:hover {
+    color: var(--tsl-link-color-success--hover);
+}
+.tsl-link-color-success:focus {
+    color: var(--tsl-link-color-success--focus);
+}
+
+/* white link */
+.tsl-link-color-white {
+    color: var(--tsl-link-color-white);
+}
+.tsl-link-color-white:hover {
+    color: var(--tsl-link-color-white--hover);
+}
+.tsl-link-color-white:focus {
+    color: var(--tsl-link-color-white--focus);
+}

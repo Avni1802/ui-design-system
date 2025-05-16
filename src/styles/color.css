@@ -1,0 +1,56 @@
+@import './default-theme.css';
+
+/**
+Color Palette
+*/
+
+:root {
+    /* Brand primary*/
+    --tsl-color-brand-primary: var(--tsl-primary-200);
+    --tsl-color-brand-hover: var(--tsl-primary-300);
+    --tsl-color-brand-subtle: var(--tsl-secondary-0);
+    --tsl-color-brand-intense: var(--tsl-primary-300);
+    --tsl-color-brand-bg: var(--tsl-opacity-primary);
+
+    /* Brand secondary */
+    --tsl-color-brand-secondary: var(--tsl-secondary-0);
+    --tsl-color-brand-secondary-hover: var(--tsl-primary-100);
+
+    /* Surfaces */
+    --tsl-color-surface-primary: var(--tsl-surface-0);
+    --tsl-color-surface-playground: var(--tsl-surface-50);
+    --tsl-color-surface-secondary: var(--tsl-surface-100);
+
+    /* Text */
+    --tsl-color-text-brand: var(--tsl-primary-200);
+    --tsl-color-text-primary: var(--tsl-text-200);
+    --tsl-color-text-disabled: var(--tsl-text-0);
+    --tsl-color-text-subtler: var(--tsl-text-100);
+    --tsl-color-text-subtlest: var(--tsl-text-50);
+    --tsl-color-text-inverse: var(--tsl-text-inverse-light);
+
+    --tsl-color-text-danger: var(--tsl-danger-200);
+    --tsl-color-text-danger-hover: var(--tsl-danger-300);
+
+    --tsl-color-text-success: var(--tsl-success-200);
+    --tsl-color-text-success-hover: var(--tsl-success-300);
+
+    --tsl-color-text-warning: var(--tsl-warning-200);
+    --tsl-color-text-warning-hover: var(--tsl-warning-300);
+
+    /* Borders */
+    --tsl-border-primary: var(--tsl-surface-100);
+    --tsl-border-focus: var(--tsl-secondary-100);
+    --tsl-border-subtlest: var(--tsl-surface-200);
+    --tsl-border-subtler: var(--tsl-surface-300);
+    --tsl-border-inverse: var(--tsl-surface-0);
+    --tsl-border-brand: var(--tsl-primary-200);
+    --tsl-border-brand-intense: var(--tsl-primary-300);
+
+    /* Icon */
+    --tsl-color-icon-primary: var(--tsl-text-200);
+    --tsl-color-icon-disabled: var(--tsl-text-0);
+    --tsl-color-icon-inverse: var(--tsl-text-inverse-light);
+
+    /* Miscellaneous */
+}

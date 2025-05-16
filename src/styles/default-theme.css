@@ -1,0 +1,79 @@
+/* Default theme tokens */
+
+:root,
+:host {
+    /* Primary */
+    --tsl-primary-50: hsl(220, 100%, 62%);
+    --tsl-primary-100: hsl(220, 75%, 49%);
+    --tsl-primary-200: hsl(220, 90%, 37%);
+    --tsl-primary-300: hsl(220, 100%, 27%);
+    --tsl-primary-400: hsl(220, 100%, 19%);
+
+    --tsl-secondary-0: hsl(219, 100%, 96%);
+    --tsl-secondary-50: hsl(219, 100%, 92%);
+    --tsl-secondary-100: hsl(220, 100%, 89%);
+    --tsl-secondary-200: hsl(220, 100%, 82%);
+    --tsl-secondary-300: hsl(220, 100%, 75%);
+    --tsl-secondary-400: hsl(220, 100%, 68%);
+
+    --tsl-text-0: hsla(220, 18%, 78%);
+    --tsl-text-50: hsl(224, 18%, 61%);
+    --tsl-text-100: hsl(220, 20%, 40%);
+    --tsl-text-200: hsl(224, 31%, 15%);
+    --tsl-text-inverse-light: hsl(0, 0%, 100%);
+
+    --tsl-danger-0: hsl(0, 93%, 96%);
+    --tsl-danger-50: hsl(0, 93%, 82%);
+    --tsl-danger-100: hsl(0, 77%, 65%);
+    --tsl-danger-200: hsl(0, 73%, 40%);
+    --tsl-danger-300: hsl(0, 80%, 28%);
+    --tsl-danger-400: hsl(0, 80%, 28%);
+
+    --tsl-success-0: hsl(151, 57%, 96%);
+    --tsl-success-50: hsl(151, 57%, 91%);
+    --tsl-success-100: hsl(150, 59%, 73%);
+    --tsl-success-200: hsl(155, 61%, 32%);
+    --tsl-success-300: hsl(155, 68%, 21%);
+    --tsl-success-400: hsl(154, 29%, 15%);
+
+    --tsl-warning-0: hsl(33, 100%, 96%);
+    --tsl-warning-50: hsl(33, 100%, 87%);
+    --tsl-warning-100: hsl(33, 100%, 70%);
+    --tsl-warning-200: hsl(33, 87%, 50%);
+    --tsl-warning-300: hsl(32, 97%, 36%);
+    --tsl-warning-400: hsl(31, 100%, 26%);
+
+    --tsl-dark-50: hsla(0, 0%, 7%, 1);
+    --tsl-dark-100: hsla(0, 0%, 9%, 1);
+    --tsl-dark-200: hsla(0, 0%, 10%, 1);
+    --tsl-dark-300: hsla(0, 0%, 11%, 1);
+    --tsl-dark-400: hsla(0, 0%, 12%, 1);
+
+    --tsl-opacity-primary: hsla(var(--tsl-primary-200), 0.15);
+    --tsl-opacity-secondary: hsla(var(--tsl-secondary-200), 0.15);
+    --tsl-opacity-danger: hsla(var(--tsl-danger-200), 0.15);
+    --tsl-opacity-success: hsla(var(--tsl-success-200),0.15);
+    --tsl-opacity-warning: hsla(var(--tsl-warning-200), 0.15);
+    --tsl-opacity-modal: hsla(var(--tsl-dark-50), 0.92);
+    --tsl-opacity-transparent: hsla(var(--tsl-surface-0), 0);
+    --tsl-opacity-transparent-50: hsla(var(--tsl-surface-0), 0.2);
+
+    /* Backgrounds */
+    --tsl-surface-0: hsl(0, 0%, 100%);
+    --tsl-surface-50: hsl(220, 27%, 98%);
+    --tsl-surface-100: hsl(220, 30%, 96%);
+    --tsl-surface-200: hsl(218, 29%, 89%);
+    --tsl-surface-300: hsl(220, 30%, 82%);
+    --tsl-surface-400: hsl(220, 29%, 75%);
+    --tsl-surface-500: hsl(219, 16%, 49%);
+    --tsl-surface-600: hsl(220, 22%, 37%);
+    --tsl-surface-700: hsl(221, 25%, 27%);
+    --tsl-surface-800: hsl(219, 30%, 19%);
+    --tsl-surface-900: hsl(224, 22%, 10%);
+
+    /* Miscellaneous */
+}
+
+/*
+   * While everything below can be edited, it is advised to leave them to default and edit the upper rule instead for easier maintenance.
+   */

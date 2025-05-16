@@ -1,0 +1,110 @@
+:root,
+:host {
+    /* Font families */
+    --tsl-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --tsl-font-family-heading: var(--tsl-font-family-base);
+    --tsl-font-family-mono:
+        ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+
+    /* Font sizes */
+    --tsl-font-size-lg: 20px;
+    --tsl-font-size-md: 15px;
+    --tsl-font-size-sm: 13px;
+    --tsl-font-size-xs: 12px;
+
+    /* Font weights */
+    --tsl-font-weight-regular: 450;
+    --tsl-font-weight-medium: 550;
+    --tsl-font-weight-semibold: 650;
+
+    /* Line heights */
+    --tsl-line-height-xs: 16px;
+    --tsl-line-height-sm: 20px;
+    --tsl-line-height-lg: 24px;
+    --tsl-line-height-md: 22px;
+
+    /* Letter spacing */
+    --tsl-letter-spacing-normal: 0px;
+    --tsl-letter-spacing-denser: -0.2px;
+    --tsl-letter-spacing-dense: -0.1px;
+
+    /* Spacing */
+    --tsl-spacing-large: 32px;
+    --tsl-spacing-semi-medium: 12px;
+    --tsl-spacing-small: 4px;
+    --tsl-spacing-regular: 8px;
+}
+
+/* Text Heading */
+.tsl-text-heading-lg{
+    font-family: var(--tsl-font-family-heading);
+    font-size: var(--tsl-font-size-lg);
+    font-style: normal;
+    font-weight: var(--tsl-font-weight-semibold);
+    line-height: var(--tsl-line-height-lg);
+    letter-spacing: var(--tsl-letter-spacing-denser);
+}
+
+.tsl-text-heading-md{
+    font-family: var(--tsl-font-family-heading);
+    font-size: var(--tsl-font-size-md);
+    font-style: normal;
+    font-weight: var(--tsl-font-weight-medium);
+    line-height: var(--tsl-line-height-md);
+    letter-spacing: var(--tsl-letter-spacing-dense);
+}
+
+.tsl-text-heading-sm{
+    font-family: var(--tsl-font-family-heading);
+    font-size: var(--tsl-font-size-sm);
+    font-style: normal;
+    font-weight: var(--tsl-font-weight-regular);
+    line-height: var(--tsl-line-height-sm);
+    letter-spacing: var(--tsl-letter-spacing-normal);
+}
+
+.tsl-text-heading-sm{
+    font-family: var(--tsl-font-family-heading);
+    font-size: var(--tsl-font-size-sm);
+    font-style: normal;
+    font-weight: var(--tsl-font-weight-regular);
+    line-height: var(--tsl-line-height-sm);
+    letter-spacing: var(--tsl-letter-spacing-normal);
+}
+
+.tsl-text-heading-form{
+    font-family: var(--tsl-font-family-heading);
+    font-size: var(--tsl-font-size-xs);
+    font-style: normal;
+    font-weight: var(--tsl-font-weight-medium);
+    line-height: var(--tsl-line-height-xs);
+    letter-spacing: var(--tsl-letter-spacing-normal);
+}
+
+/*  Text Body */
+
+.tsl-text-body-primary{
+    font-family: var(--tsl-font-family-base);
+    font-size: var(--tsl-font-size-regular);
+    font-style: normal;
+    font-weight: var(--tsl-font-weight-regular);
+    line-height: var(--tsl-line-height-sm);
+    letter-spacing: var(--tsl-letter-spacing-normal);
+}
+
+.tsl-text-body-mono{
+    font-family: var(--tsl-font-family-mono);
+    font-size: var(--tsl-font-size-regular);
+    font-style: normal;
+    font-weight: var(--tsl-font-weight-regular);
+    line-height: var(--tsl-line-height-sm);
+    letter-spacing: var(--tsl-letter-spacing-normal);
+}
+.tsl-text-body-secondary{
+    font-family: var(--tsl-font-family-base);
+    font-size: var(--tsl-font-size-xs);
+    font-style: normal;
+    font-weight: var(--tsl-font-weight-regular);
+    line-height: var(--tsl-line-height-xs);
+    letter-spacing: var(--tsl-letter-spacing-normal);
+}

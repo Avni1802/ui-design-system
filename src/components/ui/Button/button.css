@@ -1,0 +1,106 @@
+:root, :host {
+
+    --tsl-button-border: none;
+    --tsl-button-border-focus: var(--tsl-border-focus);
+    --tsl-button-border-radius: var(--tsl-spacing-small);
+    
+    /* Primary button */
+    --tsl-button-primary-bg-color: var(--tsl-color-brand-primary);
+    --tsl-button-primary-bg-color--hover: var(--tsl-color-brand-intense);
+    --tsl-button-primary-bg-color--focused: var(--tsl-color-brand-intense);
+    --tsl-button-primary-bg-color--disabled: var(--tsl-color-surface-secondary);
+    --tsl-button-primary-text-color: var(--tsl-color-text-inverse);
+    --tsl-button-primary-text-color--hover: var(--tsl-color-text-inverse);
+    --tsl-button-primary-text-color--focused: var(--tsl-color-text-inverse);
+    --tsl-button-primary-text-color--disabled: var(--tsl-color-text-disabled);
+    
+    /* Secondary button */
+    --tsl-button-secondary-bg-color: var(--tsl-color-brand-secondary);
+    --tsl-button-secondary-bg-color--hover: var(--tsl-color-surface-playground);
+    --tsl-button-secondary-bg-color--focused: var(--tsl-color-surface-playground);
+    --tsl-button-secondary-bg-color--disabled: var(--tsl-color-surface-secondary);
+    --tsl-button-secondary-text-color: var(--tsl-color-text-subtler);
+    --tsl-button-secondary-text-color--hover: var(--tsl-color-text-brand);
+    --tsl-button-secondary-text-color--focused: var(--tsl-color-text-primary);
+    --tsl-button-secondary-text-color--disabled: var(--tsl-color-text-disabled);
+    
+    /* Tertiary button */
+    --tsl-button-tertiary-bg-color: transparent;
+    --tsl-button-tertiary-bg-color--hover: transparent;
+    --tsl-button-tertiary-bg-color--focused: transparent;
+    --tsl-button-tertiary-bg-color--disabled: transparent;
+    --tsl-button-tertiary-text-color: var(--tsl-color-text-subtler);
+    --tsl-button-tertiary-text-color--hover: var(--tsl-color-text-brand);
+    --tsl-button-tertiary-text-color--focused: var(--tsl-color-text-primary);
+    --tsl-button-tertiary-text-color--disabled: var(--tsl-color-text-subtlest);
+    
+    /* Tertiary button */
+    --tsl-button-inverse-bg-color: transparent;
+    --tsl-button-inverse-bg-color--hover: transparent;
+    --tsl-button-inverse-bg-color--focused: var(--tsl-color-surface-playground);
+    --tsl-button-inverse-bg-color--disabled: var(--tsl-color-surface-inverse);
+    --tsl-button-inverse-text-color: var(--tsl-color-text-subtler);
+    --tsl-button-inverse-text-color--hover: var(--tsl-color-text-brand);
+    --tsl-button-inverse-text-color--focused: var(--tsl-color-text-primary);
+    --tsl-button-inverse-text-color--disabled: var(--tsl-color-text-subtlest);
+
+}
+
+.tsl-button{
+    border-radius: var(--tsl-button-border-radius);
+    border: var(--tsl-button-border);
+    text-align: center;
+    cursor: pointer;
+    white-space: normal;
+    hyphens: auto;
+    display: flex;
+    height: var(--tsl-spacing-large);
+    padding: 0px --tsl-spacing-semi-medium;
+    align-items: center;
+    justify-content: center;
+    gap: var(--tsl-spacing-regular);
+    align-self: stretch;
+}
+
+/* Primary button */
+.tsl-button, .tsl-button-primary{
+    background-color: var(--tsl-button-primary-bg-color);
+    color: var(--tsl-button-primary-text-color);
+
+}
+.tsl-button-primary:hover{
+    background-color: var(--tsl-button-primary-bg-color--hover);
+    color: var(--tsl-button-primary-text-color--hover);
+}
+.tsl-button-primary:focus, .tsl-button-primary:active{
+    background-color: var(--tsl-button-primary-bg-color--focused);
+    color: var(--tsl-button-primary-text-color--focused);
+    outline: var(--tsl-button-border-focus);
+    outline-offset: 2px;
+
+}
+.tsl-button-primary:disabled{
+    background-color: var(--tsl-button-primary-bg-color--disabled);
+    color: var(--tsl-button-primary-text-color--disabled);
+}
+
+/* Secondary button */
+.tsl-button, .tsl-button-secondary{
+    background-color: var(--tsl-button-secondary-bg-color);
+    color: var(--tsl-button-secondary-text-color);
+}
+.tsl-button-secondary:hover{
+    background-color: var(--tsl-button-secondary-bg-color--hover);
+    color: var(--tsl-button-secondary-text-color--hover);
+}
+
+.tsl-button-secondary:focus, .tsl-button-secondary:active{
+    background-color: var(--tsl-button-secondary-bg-color--focused);
+    color: var(--tsl-button-secondary-text-color--focused);
+}
+.tsl-button-secondary:disabled{
+    background-color: var(--tsl-button-secondary-bg-color--disabled);
+    color: var(--tsl-button-secondary-text-color--disabled);
+}
+
+

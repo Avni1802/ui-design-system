@@ -1,0 +1,103 @@
+@import url('./color.css');
+@import url('./default-theme.css');
+@import url('./grid.css');
+@import url('./typography.css');
+@import url('./normalise.css');
+
+/* Reset and base styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--tsl-font-family-base);
+    font-size: var(--tsl-font-size-md);
+    line-height: var(--tsl-line-height-regular);
+    color: var(--tsl-color-text-primary);
+    background-color: var(--color-surface-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+/* Focus styles */
+/* :focus-visible {
+    outline: 2px solid var(--border-focus);
+    outline-offset: 2px;
+} */
+
+/* Utility classes */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Layout utilities */
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.gap-1 {
+    gap: var(--tsl-spacing-small);
+}
+
+.gap-2 {
+    gap: var(--tsl-spacing-regular);
+}
+
+.gap-3 {
+    gap: var(--tsl-spacing-semi-medium);
+}
+
+.gap-4 {
+    gap: var(--tsl-spacing-large);
+}
+
+.p1 {
+    padding: 12px;
+    display: flex;
+    .tsl-button {
+        margin: 20px;
+    }
+}
+
+.bg {
+    background-color: var(--tsl-color-brand-primary);
+}
