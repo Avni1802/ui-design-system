@@ -1,0 +1,6 @@
+.progress-container {
+    min-height: 447px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

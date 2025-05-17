@@ -1,10 +1,9 @@
-:root, :host {
-
+:root,
+:host {
     --tsl-button-border: none;
     --tsl-button-border-focus: 2px solid var(--tsl-border-focus);
     --tsl-button-border-radius: var(--tsl-spacing-small);
 
-    
     /* Primary button */
     --tsl-button-primary-bg-color: var(--tsl-color-brand-primary);
     --tsl-button-primary-bg-color--hover: var(--tsl-color-brand-intense);
@@ -17,7 +16,6 @@
     --tsl-button-primary-border: none;
     --tsl-button-primary-border-radius: 2px;
 
-    
     /* Secondary button */
     --tsl-button-secondary-bg-color: var(--tsl-color-brand-secondary);
     --tsl-button-secondary-bg-color--hover: var(--tsl-color-surface-playground);
@@ -29,8 +27,7 @@
     --tsl-button-secondary-text-color--disabled: var(--tsl-color-text-disabled);
     --tsl-button-secondary-border: 1px solid var(--tsl-border-subtler);
     --tsl-button-secondary-border-radius: var(--tsl-spacing-small);
-    
-    
+
     /* Tertiary button */
     --tsl-button-tertiary-bg-color: transparent;
     --tsl-button-tertiary-bg-color--hover: transparent;
@@ -40,7 +37,7 @@
     --tsl-button-tertiary-text-color--hover: var(--tsl-color-text-brand);
     --tsl-button-tertiary-text-color--focused: var(--tsl-color-text-primary);
     --tsl-button-tertiary-text-color--disabled: var(--tsl-color-text-subtlest);
-    
+
     /* Tertiary button */
     --tsl-button-inverse-bg-color: transparent;
     --tsl-button-inverse-bg-color--hover: transparent;
@@ -50,14 +47,9 @@
     --tsl-button-inverse-text-color--hover: var(--tsl-color-text-brand);
     --tsl-button-inverse-text-color--focused: var(--tsl-color-text-primary);
     --tsl-button-inverse-text-color--disabled: var(--tsl-color-text-subtlest);
-
-
-
 }
 
-
-
-.tsl-button{
+.tsl-button {
     border-radius: var(--tsl-button-border-radius);
     border: var(--tsl-button-border);
     text-align: center;
@@ -74,111 +66,109 @@
 }
 
 /* Primary button */
-.tsl-button-primary{
+.tsl-button-primary {
     background-color: var(--tsl-button-primary-bg-color);
     color: var(--tsl-button-primary-text-color);
     border: var(--tsl-button-border);
     border-radius: var(--tsl-button-border-radius);
-
 }
-.tsl-button-primary:hover{
+.tsl-button-primary:hover {
     background-color: var(--tsl-button-primary-bg-color--hover);
     color: var(--tsl-button-primary-text-color--hover);
 }
-.tsl-button-primary:focus{
+.tsl-button-primary:focus {
     background-color: var(--tsl-button-primary-bg-color--focused);
     color: var(--tsl-button-primary-text-color--focused);
     outline: var(--tsl-button-border-focus);
     outline-offset: 0px;
 }
 
-.tsl-button-primary:disabled{
+.tsl-button-primary:disabled {
     background-color: var(--tsl-button-primary-bg-color--disabled);
     color: var(--tsl-button-primary-text-color--disabled);
     cursor: not-allowed;
 }
 
 /* Secondary button */
-.tsl-button-secondary{
+.tsl-button-secondary {
     background-color: transparent;
     color: var(--tsl-button-secondary-text-color);
     border: var(--tsl-button-secondary-border);
     border-radius: var(--tsl-button-border-radius);
 }
-.tsl-button-secondary:hover{
+.tsl-button-secondary:hover {
     background-color: var(--tsl-button-secondary-bg-color--hover);
     color: var(--tsl-button-secondary-text-color--hover);
 }
 
-.tsl-button-secondary:focus, .tsl-button-secondary:active{
+.tsl-button-secondary:focus,
+.tsl-button-secondary:active {
     background-color: var(--tsl-button-secondary-bg-color--focused);
     color: var(--tsl-button-secondary-text-color--focused);
     outline: var(--tsl-button-border-focus);
     outline-offset: 0px;
 }
-.tsl-button-secondary:disabled{
+.tsl-button-secondary:disabled {
     background-color: var(--tsl-button-secondary-bg-color--disabled);
     color: var(--tsl-button-secondary-text-color--disabled);
     cursor: not-allowed;
 }
 
 /* Tertiary button */
-.tsl-button-tertiary{
+.tsl-button-tertiary {
     background-color: transparent;
     color: var(--tsl-button-tertiary-text-color);
     border: var(--tsl-button-tertiary-border);
     border-radius: var(--tsl-button-border-radius);
 }
-.tsl-button-tertiary:hover{
+.tsl-button-tertiary:hover {
     background-color: var(--tsl-button-tertiary-bg-color--hover);
     color: var(--tsl-button-tertiary-text-color--hover);
 }
 
-.tsl-button-tertiary:focus, .tsl-button-tertiary:active{
+.tsl-button-tertiary:focus,
+.tsl-button-tertiary:active {
     background-color: var(--tsl-button-tertiary-bg-color--focused);
     color: var(--tsl-button-tertiary-text-color--focused);
     outline: var(--tsl-button-border-focus);
     outline-offset: 0px;
 }
-.tsl-button-tertiary:disabled{
+.tsl-button-tertiary:disabled {
     background-color: var(--tsl-button-tertiary-bg-color--disabled);
     color: var(--tsl-button-tertiary-text-color--disabled);
     cursor: not-allowed;
 }
 
-
 /* Link button */
-.tsl-button-link{
+.tsl-button-link {
     background-color: transparent;
     color: var(--tsl-button-link-text-color);
     border: var(--tsl-button-link-border);
     border-radius: var(--tsl-button-border-radius);
 }
-.tsl-button-link:hover{
+.tsl-button-link:hover {
     background-color: var(--tsl-button-link-bg-color--hover);
     color: var(--tsl-button-link-text-color--hover);
 }
 
-.tsl-button-link:focus, .tsl-button-link:active{
+.tsl-button-link:focus,
+.tsl-button-link:active {
     background-color: var(--tsl-button-link-bg-color--focused);
     color: var(--tsl-button-link-text-color--focused);
     outline: var(--tsl-button-border-focus);
     outline-offset: 0px;
 }
-.tsl-button-link:disabled{
+.tsl-button-link:disabled {
     background-color: var(--tsl-button-link-bg-color--disabled);
     color: var(--tsl-button-link-text-color--disabled);
     cursor: not-allowed;
 }
 
 /* Button icon */
-.button-icon{
+.button-icon {
     flex-direction: column;
-    flex: 1 0 0;
 }
 
 /* Button Size */
-.tsl-button-size-sm{
-    
-
+.tsl-button-size-sm {
 }

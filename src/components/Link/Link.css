@@ -34,7 +34,8 @@
 /* Color variants */
 
 /* Link hover and focus states */
-.tsl-link:hover:not(:disabled), .tsl-link:focus:not(:disabled) {
+.tsl-link:hover:not(:disabled),
+.tsl-link:focus:not(:disabled) {
     text-decoration-line: underline;
     text-decoration-style: solid;
     text-decoration-skip-ink: none;
@@ -50,13 +51,10 @@
 }
 .tsl-link-color-primary:hover {
     color: var(--tsl-link-color-primary--hover);
-
 }
 .tsl-link-color-primary:focus {
     color: var(--tsl-link-color-primary--focus);
-
 }
-
 
 /* Black link */
 .tsl-link-color-black {

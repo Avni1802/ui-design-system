@@ -52,7 +52,7 @@
     --tsl-opacity-primary: hsla(var(--tsl-primary-200), 0.15);
     --tsl-opacity-secondary: hsla(var(--tsl-secondary-200), 0.15);
     --tsl-opacity-danger: hsla(var(--tsl-danger-200), 0.15);
-    --tsl-opacity-success: hsla(var(--tsl-success-200),0.15);
+    --tsl-opacity-success: hsla(var(--tsl-success-200), 0.15);
     --tsl-opacity-warning: hsla(var(--tsl-warning-200), 0.15);
     --tsl-opacity-modal: hsla(var(--tsl-dark-50), 0.92);
     --tsl-opacity-transparent: hsla(var(--tsl-surface-0), 0);

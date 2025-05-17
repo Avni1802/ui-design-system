@@ -1,0 +1,95 @@
+:root,
+:host {
+    /* Default tag */
+    --tsl-tag-default-bg-color: var(--tsl-color-surface-secondary);
+    --tsl-tag-default-text-color: var(--tsl-color-text-primary);
+    --tsl-tag-default-border: 1px solid var(--tsl-border-subtle);
+    --tsl-tag-text-color--focus: var(--tsl-color-text-brand);
+
+    /* Focus tag */
+    --tsl-tag-default-bg-color: var(--tsl-color-surface-secondary);
+    --tsl-tag-default-text-color: var(--tsl-color-text-subtle);
+    --tsl-tag-default-border: 1px solid var(--tsl-border-subtle);
+    --tsl-tag-default-bg-color--focus: var(--tsl-color-surface-playground);
+
+    /* Disabled state */
+    --tsl-tag-disabled-opacity: 0.5;
+    --tsl-tag-disabled-cursor: not-allowed;
+}
+
+.tsl-tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--tsl-spacing-small);
+    border-radius: 1000px;
+    font-size: var(--tsl-font-size-body-secondary);
+    line-height: var(--tsl-line-height-body-secondary);
+    cursor: default;
+    max-width: 100%;
+    transition:
+        background-color 0.2s,
+        color 0.2s;
+}
+
+/* Size variants */
+.tsl-tag-size-regular {
+    padding: var(--tsl-spacing-smallest) var(--tsl-spacing-semi-medium);
+}
+
+.tsl-tag-size-large {
+    padding: var(--tsl-spacing-small) var(--tsl-spacing-medium);
+}
+
+/* Default tag */
+.tsl-tag-default {
+    background-color: var(--tsl-tag-default-bg-color);
+    color: var(--tsl-tag-default-text-color);
+    border: var(--tsl-tag-default-border);
+}
+
+.tsl-tag-icon-close:focus {
+    color: var(--tsl-tag-text-color--focus) !important;
+    outline: var(--tsl-tag-text-color--focus);
+}
+
+/* Disabled state */
+.tsl-tag-disabled {
+    opacity: var(--tsl-tag-disabled-opacity);
+    cursor: var(--tsl-tag-disabled-cursor);
+    pointer-events: none;
+}
+
+/* Icon only */
+.tsl-tag-icon-only {
+    padding: var(--tsl-tag-padding-y);
+}
+
+.tsl-tag-size-large.tsl-tag-icon-only {
+    width: 32px;
+    height: 32px;
+}
+
+/* Tag icons */
+.tsl-tag-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tsl-tag-icon-close {
+    cursor: pointer;
+    margin-left: auto;
+    outline: var(--tsl-tag-text-color--focus);
+}
+
+.tsl-tag-icon-close:hover {
+    opacity: 0.8;
+}
+
+/* Tag label */
+.tsl-tag-label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

@@ -90,14 +90,15 @@ textarea {
     gap: var(--tsl-spacing-large);
 }
 
-.p1 {
-    padding: 12px;
-    display: flex;
-    .tsl-button {
-        margin: 20px;
-    }
+.w-full {
+    width: 100%;
 }
 
-.bg {
-    background-color: var(--tsl-color-brand-primary);
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+* {
+    box-sizing: border-box;
 }

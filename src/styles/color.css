@@ -20,6 +20,8 @@ Color Palette
     --tsl-color-surface-primary: var(--tsl-surface-0);
     --tsl-color-surface-playground: var(--tsl-surface-50);
     --tsl-color-surface-secondary: var(--tsl-surface-100);
+    --tsl-color-surface-tertiary: var(--tsl-surface-300);
+    --tsl-color-surface-tertiary--hover: var(--tsl-surface-400);
 
     /* Text */
     --tsl-color-text-brand: var(--tsl-primary-200);
@@ -45,6 +47,7 @@ Color Palette
     --tsl-border-subtler: var(--tsl-surface-300);
     --tsl-border-inverse: var(--tsl-surface-0);
     --tsl-border-brand: var(--tsl-primary-200);
+    --tsl-border-bold: var(--tsl-surface-500);
     --tsl-border-brand-intense: var(--tsl-primary-300);
 
     /* Icon */
@@ -53,4 +56,24 @@ Color Palette
     --tsl-color-icon-inverse: var(--tsl-text-inverse-light);
 
     /* Miscellaneous */
+}
+
+.tsl-text-color-primary {
+    color: var(--tsl-color-text-brand);
+}
+
+.tsl-text-color-danger {
+    color: var(--tsl-color-text-danger);
+}
+
+.tsl-text-color-success {
+    color: var(--tsl-color-text-success);
+}
+
+.tsl-text-color-warning {
+    color: var(--tsl-color-text-warning);
+}
+
+.tsl-text-color-default {
+    color: var(--tsl-color-text-subtlest);
 }

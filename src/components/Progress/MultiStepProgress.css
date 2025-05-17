@@ -1,0 +1,136 @@
+:root,
+:host {
+    --tsl-progress-dot-size: 6px;
+    --tsl-progress-line-width: 1px;
+    --tsl-progress-spacing: var(--tsl-spacing-regular);
+
+    /* Primary variant */
+    --tsl-progress-primary-color-completed: var(--tsl-color-brand-primary);
+    --tsl-progress-primary-color-current: var(--tsl-color-brand-intense);
+    --tsl-progress-primary-color-upcoming: var(--tsl-color-surface-secondary);
+    --tsl-progress-primary-line-color: var(--tsl-border-subtlest);
+
+    /* Secondary variant */
+    --tsl-progress-secondary-color-completed: var(--tsl-color-brand-secondary);
+    --tsl-progress-secondary-color-current: var(--tsl-color-brand-primary);
+    --tsl-progress-secondary-color-upcoming: var(--tsl-color-surface-secondary);
+    --tsl-progress-secondary-line-color: var(--tsl-border-subtler);
+}
+
+/* Base styles */
+.tsl-progress {
+    display: flex;
+    position: relative;
+}
+
+.tsl-progress-steps {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+}
+
+.tsl-progress-step {
+    display: flex;
+    position: relative;
+    padding-bottom: var(--tsl-spacing-large);
+    padding-left: calc(var(--tsl-progress-dot-size) + var(--tsl-spacing-medium));
+}
+
+.tsl-progress-step:last-child {
+    padding-bottom: 0;
+}
+
+.tsl-progress-indicator {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.tsl-progress-dot {
+    width: var(--tsl-progress-dot-size);
+    height: var(--tsl-progress-dot-size);
+    border-radius: 50%;
+    background-color: var(--tsl-progress-primary-color-upcoming);
+    position: relative;
+    z-index: 2;
+    top: 5px;
+}
+
+.tsl-progress-step-completed .tsl-progress-dot,
+.tsl-progress-step-current .tsl-progress-dot {
+    background-color: var(--tsl-progress-primary-color-completed);
+}
+
+.tsl-progress-secondary .tsl-progress-step-completed .tsl-progress-dot,
+.tsl-progress-secondary .tsl-progress-step-current .tsl-progress-dot {
+    background-color: var(--tsl-progress-secondary-color-completed);
+}
+
+/* Connector line between dots */
+.tsl-progress-connector {
+    position: absolute;
+    top: 5px;
+    left: calc(var(--tsl-progress-dot-size) / 2 - var(--tsl-progress-line-width) / 2);
+    width: var(--tsl-progress-line-width);
+    height: 100%;
+    background-color: var(--tsl-progress-primary-line-color);
+    z-index: 1;
+}
+
+.tsl-progress-connector-completed {
+    background-color: var(--tsl-progress-primary-color-completed);
+}
+
+.tsl-progress-secondary .tsl-progress-connector-completed {
+    background-color: var(--tsl-progress-secondary-color-completed);
+}
+
+.tsl-progress-content {
+    flex: 1;
+}
+
+.tsl-text-body-primary {
+    font-weight: 600;
+    margin-bottom: var(--tsl-spacing-small);
+}
+.tsl-progress-step-completed .tsl-text-body-primary,
+.tsl-progress-step-current .tsl-text-body-primary {
+    color: var(--tsl-color-text-brand);
+}
+
+.tsl-progress-description {
+    font-size: 0.875rem;
+    color: var(--tsl-color-text-subtle);
+    margin-bottom: var(--tsl-spacing-medium);
+}
+
+/* Size variants */
+.tsl-progress-sm {
+    --tsl-progress-dot-size: 6px;
+}
+
+.tsl-progress-sm .tsl-text-body-primary {
+}
+
+.tsl-progress-sm .tsl-progress-description {
+    font-size: 0.75rem;
+}
+
+.tsl-progress-md {
+    --tsl-progress-dot-size: 12px;
+}
+
+.tsl-progress-lg {
+    --tsl-progress-dot-size: 16px;
+}
+
+.tsl-progress-lg .tsl-text-body-primary {
+}
+.tsl-progress-content .tsl-text-body-primary {
+    font-weight: 550;
+}

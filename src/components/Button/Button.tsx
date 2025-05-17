@@ -22,7 +22,7 @@ const buttonVariants = cva('tsl-button', {
             lg: ['tsl-text-body-primary'],
         },
         isFullWidth: {
-            true: ['button-full-width'],
+            true: ['w-full'],
         },
         iconOnly: {
             true: ['button-icon-only'],

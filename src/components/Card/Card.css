@@ -1,0 +1,19 @@
+.tsl-card {
+    background-color: var(--tsl-color-surface-primary);
+    border-radius: calc(2 * var(--tsl-spacing-small));
+    padding: var(--tsl-spacing-large);
+    display: flex;
+    padding: var(--tsl-spacing-medium);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--tsl-spacing-large);
+    align-self: stretch;
+    flex: 1 1 0%;
+}
+
+.tsl-card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--tsl-spacing-large);
+}

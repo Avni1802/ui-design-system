@@ -30,13 +30,16 @@
 
     /* Spacing */
     --tsl-spacing-large: 32px;
+    --tsl-spacing--semi-large: 24px;
     --tsl-spacing-semi-medium: 12px;
+    --tsl-spacing-medium: 16px;
     --tsl-spacing-small: 4px;
+    --tsl-spacing-smallest: 2px;
     --tsl-spacing-regular: 8px;
 }
 
 /* Text Heading */
-.tsl-text-heading-lg{
+.tsl-text-heading-lg {
     font-family: var(--tsl-font-family-heading);
     font-size: var(--tsl-font-size-lg);
     font-style: normal;
@@ -45,7 +48,7 @@
     letter-spacing: var(--tsl-letter-spacing-denser);
 }
 
-.tsl-text-heading-md{
+.tsl-text-heading-md {
     font-family: var(--tsl-font-family-heading);
     font-size: var(--tsl-font-size-md);
     font-style: normal;
@@ -54,7 +57,7 @@
     letter-spacing: var(--tsl-letter-spacing-dense);
 }
 
-.tsl-text-heading-sm{
+.tsl-text-heading-sm {
     font-family: var(--tsl-font-family-heading);
     font-size: var(--tsl-font-size-sm);
     font-style: normal;
@@ -63,16 +66,7 @@
     letter-spacing: var(--tsl-letter-spacing-normal);
 }
 
-.tsl-text-heading-sm{
-    font-family: var(--tsl-font-family-heading);
-    font-size: var(--tsl-font-size-sm);
-    font-style: normal;
-    font-weight: var(--tsl-font-weight-regular);
-    line-height: var(--tsl-line-height-sm);
-    letter-spacing: var(--tsl-letter-spacing-normal);
-}
-
-.tsl-text-heading-form{
+.tsl-text-heading-form {
     font-family: var(--tsl-font-family-heading);
     font-size: var(--tsl-font-size-xs);
     font-style: normal;
@@ -83,16 +77,16 @@
 
 /*  Text Body */
 
-.tsl-text-body-primary{
+.tsl-text-body-primary {
     font-family: var(--tsl-font-family-base);
-    font-size: var(--tsl-font-size-regular);
+    font-size: var(--tsl-font-size-sm);
     font-style: normal;
     font-weight: var(--tsl-font-weight-regular);
     line-height: var(--tsl-line-height-sm);
     letter-spacing: var(--tsl-letter-spacing-normal);
 }
 
-.tsl-text-body-mono{
+.tsl-text-body-mono {
     font-family: var(--tsl-font-family-mono);
     font-size: var(--tsl-font-size-regular);
     font-style: normal;
@@ -100,11 +94,22 @@
     line-height: var(--tsl-line-height-sm);
     letter-spacing: var(--tsl-letter-spacing-normal);
 }
-.tsl-text-body-secondary{
+.tsl-text-body-secondary {
     font-family: var(--tsl-font-family-base);
     font-size: var(--tsl-font-size-xs);
     font-style: normal;
     font-weight: var(--tsl-font-weight-regular);
     line-height: var(--tsl-line-height-xs);
     letter-spacing: var(--tsl-letter-spacing-normal);
+}
+
+.tsl-text-color-subtler {
+    color: var(--tsl-color-text-subtler);
+}
+
+.tsl-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--tsl-spacing-semi-medium);
+    width: 100%;
 }

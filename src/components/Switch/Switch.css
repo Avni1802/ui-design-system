@@ -1,0 +1,175 @@
+:root,
+:host {
+    /* Switch variables */
+    --tsl-switch-width-small: 32px;
+    --tsl-switch-height-small: 18px;
+    --tsl-switch-width-regular: 40px;
+    --tsl-switch-height-regular: 24px;
+    --tsl-switch-width-large: 48px;
+    --tsl-switch-height-large: 28px;
+
+    --tsl-switch-knob-size-small: 14px;
+    --tsl-switch-knob-size-regular: 18px;
+    --tsl-switch-knob-size-large: 22px;
+
+    --tsl-switch-border-radius: 12px;
+    --tsl-switch-knob-border-radius: 50%;
+
+    /* Colors */
+
+    --tsl-switch-bg-color-off: var(--tsl-color-surface-secondary);
+    --tsl-switch-bg-color-on: var(--tsl-color-brand-primary);
+    --tsl-switch-bg-color-disabled: var(--tsl-color-surface-playground);
+
+    --tsl-switch-knob-color: var(--tsl-color-surface-primary);
+
+    --tsl-switch-knob-color-disabled: var(--tsl-color-surface-secondary);
+
+    /* Hover states */
+
+    --tsl-switch-bg-color-off-hover: var(--tsl-color-surface-bold);
+    --tsl-switch-bg-color-on-hover: var(--tsl-color-brand-intense);
+
+    /* Focus state */
+
+    --tsl-switch-border-focus: 2px solid var(--tsl-border-focus);
+}
+
+.tsl-switch-container {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--tsl-spacing-regular);
+    position: relative;
+}
+
+.tsl-switch-input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.tsl-switch-track {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: var(--tsl-switch-border-radius);
+    transition: background-color 0.2s ease;
+}
+
+/* Small size */
+.tsl-switch-track.small {
+    width: var(--tsl-switch-width-small);
+    height: var(--tsl-switch-height-small);
+}
+
+/* Regular size */
+.tsl-switch-track.regular {
+    width: var(--tsl-switch-width-regular);
+    height: var(--tsl-switch-height-regular);
+}
+
+/* Large size */
+.tsl-switch-track.large {
+    width: var(--tsl-switch-width-large);
+    height: var(--tsl-switch-height-large);
+}
+
+/* Knob/thumb styles */
+.tsl-switch-knob {
+    position: absolute;
+    top: 50%;
+    left: 3px;
+    transform: translateY(-50%);
+    border-radius: var(--tsl-switch-knob-border-radius);
+    background-color: var(--tsl-switch-knob-color);
+    transition: transform 0.2s ease;
+}
+
+.tsl-switch-track.small .tsl-switch-knob {
+    width: var(--tsl-switch-knob-size-small);
+    height: var(--tsl-switch-knob-size-small);
+}
+
+.tsl-switch-track.regular .tsl-switch-knob {
+    width: var(--tsl-switch-knob-size-regular);
+    height: var(--tsl-switch-knob-size-regular);
+}
+
+.tsl-switch-track.large .tsl-switch-knob {
+    width: var(--tsl-switch-knob-size-large);
+    height: var(--tsl-switch-knob-size-large);
+}
+
+/* Unchecked state */
+.tsl-switch-track {
+    background-color: var(--tsl-switch-bg-color-off);
+}
+
+/* Checked state */
+
+.tsl-switch-input:checked + .tsl-switch-track {
+    background-color: var(--tsl-switch-bg-color-on);
+}
+
+.tsl-switch-input:checked + .tsl-switch-track.small .tsl-switch-knob {
+    transform: translateY(-50%)
+        translateX(calc(var(--tsl-switch-width-small) - var(--tsl-switch-knob-size-small) - 6px));
+}
+
+.tsl-switch-input:checked + .tsl-switch-track.regular .tsl-switch-knob {
+    transform: translateY(-50%)
+        translateX(
+            calc(var(--tsl-switch-width-regular) - var(--tsl-switch-knob-size-regular) - 6px)
+        );
+}
+
+.tsl-switch-input:checked + .tsl-switch-track.large .tsl-switch-knob {
+    transform: translateY(-50%)
+        translateX(calc(var(--tsl-switch-width-large) - var(--tsl-switch-knob-size-large) - 6px));
+}
+
+/* Hover states */
+.tsl-switch-track:hover:not(.disabled) {
+    background-color: var(--tsl-switch-bg-color-off-hover);
+}
+
+.tsl-switch-input:checked + .tsl-switch-track:hover:not(.disabled) {
+    background-color: var(--tsl-switch-bg-color-on-hover);
+}
+
+/* Disabled state */
+.tsl-switch-track.disabled {
+    background-color: var(--tsl-switch-bg-color-disabled);
+    cursor: not-allowed;
+}
+
+.tsl-switch-track.disabled .tsl-switch-knob {
+    background-color: var(--tsl-switch-knob-color-disabled);
+}
+
+/* Focus state */
+.tsl-switch-input:focus-visible + .tsl-switch-track {
+    outline: var(--tsl-switch-border-focus);
+    outline-offset: 0px;
+}
+
+/* Label styles */
+.tsl-switch-label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: var(--tsl-spacing-smallest);
+}
+
+.tsl-switch-text {
+    color: var(--tsl-color-text-primary);
+    font-feature-settings:
+        'liga' off,
+        'clig' off;
+}
+
+.tsl-switch-help-text {
+    color: var(--tsl-color-text-subtlest);
+}
