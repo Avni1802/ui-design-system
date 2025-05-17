@@ -11,7 +11,7 @@
     flex: 1 1 0%;
 }
 
-.tsl-card-content{
+.tsl-card-content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;

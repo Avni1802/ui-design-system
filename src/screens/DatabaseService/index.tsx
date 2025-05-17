@@ -3,7 +3,6 @@ import AdditionalDetails from './AdditionalDetails';
 import ServiceDetails from './ServiceDetails';
 import { ServiceProgress } from './ServiceProgress';
 import './services.css';
-import { useEffect, useState } from 'react';
 import { useForm, FormProvider } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
@@ -48,7 +47,7 @@ const databaseServiceSchema = z.object({
 export type DatabaseServiceFormData = z.infer<typeof databaseServiceSchema>;
 
 const DatabaseService = () => {
-    const [currentStep, setCurrentStep] = useState(0);
+    const currentStep = 0;
 
     const methods = useForm<DatabaseServiceFormData>({
         resolver: zodResolver(databaseServiceSchema),
