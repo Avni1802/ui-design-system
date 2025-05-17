@@ -36,7 +36,10 @@ const Sidebar = React.forwardRef<HTMLButtonElement, SidebarProps>(() => {
                     iconLeading={<img src={logo} alt="logo" />}
                 />
                 <MenuItem label="Apps" showLeading iconLeading={<AppstoreOutlined />} />
-                <Input variant="select" options={[{ value: '', label: 'DB Services' }]} />
+                <Input
+                    variant="select"
+                    options={[{ value: 'DB Services', label: 'DB Services' }]}
+                />
                 <MenuItem
                     label="My Services"
                     active
