@@ -3,7 +3,7 @@ import { Input } from '@/components/Input/Input';
 import { Selection } from '@/components/Selection';
 import { Tag } from '@/components/Tag/Tag';
 import { useFormContext, Controller } from 'react-hook-form';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { DatabaseServiceFormData } from '.';
 
 const ServiceDetails = () => {
@@ -12,9 +12,15 @@ const ServiceDetails = () => {
 
     const {
         control,
+        setValue,
         formState: { errors },
     } = useFormContext<DatabaseServiceFormData>();
     const serviceDetailsErrors = errors.serviceDetails || {};
+
+    // Update form value when tags change
+    useEffect(() => {
+        setValue('serviceDetails.tags', tagsList.join(','), { shouldValidate: true });
+    }, [tagsList, setValue]);
 
     const handleAddTag = () => {
         if (tagInput.trim()) {

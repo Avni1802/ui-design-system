@@ -1,8 +1,14 @@
 @import './default-theme.css';
 
 /**
-Color Palette
-*/
+ * Color Palette
+ * 
+ * This file defines the color variables used throughout the application.
+ * It imports the default theme and establishes semantic color tokens
+ * for brand colors, surfaces, text, borders, and icons.
+ * 
+ * Color classes are also provided for convenient text coloring.
+ */
 
 :root {
     /* Brand primary*/
@@ -14,7 +20,7 @@ Color Palette
 
     /* Brand secondary */
     --tsl-color-brand-secondary: var(--tsl-secondary-0);
-    --tsl-color-brand-secondary-hover: var(--tsl-primary-100);
+    --tsl-color-brand-secondary-hover: var(--tsl-secondary-100);
 
     /* Surfaces */
     --tsl-color-surface-primary: var(--tsl-surface-0);

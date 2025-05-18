@@ -1,0 +1,64 @@
+.tsl-table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--tsl-font-family, sans-serif);
+}
+
+.tsl-table-header {
+    display: flex;
+    border-bottom: 2px solid var(--tsl-color-border-strong, #d1d5db);
+    background-color: var(--tsl-color-background-subtle, #f9fafb);
+}
+
+.tsl-table-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.tsl-table-row {
+    display: flex;
+    width: 100%;
+}
+
+.tsl-table-header-cell-wrapper,
+.tsl-table-cell-wrapper {
+    flex: 1;
+    min-width: 0;
+    align-items: center;
+    display: flex;
+}
+
+/* Density variants */
+.tsl-table-expanded .tsl-table-row {
+    min-height: 56px;
+}
+
+.tsl-table-compact .tsl-table-row {
+    min-height: 40px;
+}
+
+/* Striped rows */
+.tsl-table-striped .tsl-table-row:nth-child(even) {
+    background-color: var(--tsl-color-background-subtle, #f9fafb);
+}
+
+/* Bordered table */
+.tsl-table-bordered {
+    border: 1px solid var(--tsl-color-border, #e5e7eb);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.tsl-table-bordered .tsl-table-header {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+/* Empty state */
+.tsl-table-empty-state {
+    padding: 24px;
+    text-align: center;
+    color: var(--tsl-color-text-subtle, #6b7280);
+}

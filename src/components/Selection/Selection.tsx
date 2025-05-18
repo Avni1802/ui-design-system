@@ -1,3 +1,14 @@
+/**
+ * A selection control that can be used as a checkbox or radio button.
+ *
+ * @example
+ * <Selection
+ *   type="checkbox"
+ *   label="Accept terms"
+ *   helpText="Please read our terms and conditions"
+ * />
+ */
+
 import * as React from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { clsx } from 'clsx';

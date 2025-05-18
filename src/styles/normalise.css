@@ -1,3 +1,14 @@
+/**
+ * Normalize and Reset
+ * 
+ * Combines normalize.css v8.0.1 with additional aggressive resets.
+ * Ensures consistent rendering across different browsers by:
+ * - Correcting bugs and common browser inconsistencies
+ * - Resetting all element margins, paddings, and borders
+ * - Standardizing form elements
+ * - Setting sensible defaults for HTML5 elements
+ * - Preventing iOS text size adjustment after orientation change
+ */
 /* ! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -421,10 +432,24 @@ details,
 embed,
 figure,
 figcaption,
-footer,
+footer,/**
+ * Resets list styles by removing default margins and paddings for ordered and unordered lists.
+ * 
+ * This selector targets both <ol> and <ul> elements to provide a clean slate for list styling,
+ * removing any browser-default spacing and preparing lists for custom styling.
+ */
 header,
 hgroup,
-menu,
+menu,/**
+ * Normalizes and resets default browser styles for HTML elements.
+ * 
+ * This CSS file provides a consistent baseline styling across different browsers
+ * by resetting margins, paddings, borders, and setting default font properties.
+ * It also ensures proper display of HTML5 elements in older browsers.
+ * 
+ * @file normalise.css
+ * @description Provides a CSS reset and normalization for web elements
+ */
 nav,
 output,
 ruby,

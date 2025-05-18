@@ -1,3 +1,13 @@
+/**
+ * A toggle switch component for boolean settings.
+ *
+ * @example
+ * <Switch
+ *   label="Enable notifications"
+ *   helpText="Receive updates about your account"
+ * />
+ */
+
 import * as React from 'react';
 import { clsx } from 'clsx';
 import './Switch.css';

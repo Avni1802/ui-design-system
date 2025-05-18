@@ -6,6 +6,8 @@ import './services.css';
 import { useForm, FormProvider } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
+import { useState } from 'react';
+import { Layout } from '@/components/Layout/Layout';
 
 const steps = [
     {
@@ -47,7 +49,9 @@ const databaseServiceSchema = z.object({
 export type DatabaseServiceFormData = z.infer<typeof databaseServiceSchema>;
 
 const DatabaseService = () => {
-    const currentStep = 0;
+    const [currentStep, setCurrentStep] = useState(0);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const totalSteps = steps.length;
 
     const methods = useForm<DatabaseServiceFormData>({
         resolver: zodResolver(databaseServiceSchema),
@@ -70,57 +74,88 @@ const DatabaseService = () => {
                 snapshotTime: '',
             },
         },
-        mode: 'onBlur',
+        mode: 'onTouched',
     });
-    // const { watch, trigger } = methods;
-    // useEffect(() => {
-    //     const { unsubscribe } = watch(() => {
-    //         nextStep();
-    //     });
-    //     return () => unsubscribe();
-    // }, [watch, trigger]);
 
-    // const handleSubmitStep = async () => {
-    //     if (currentStep < totalSteps) {
-    //         await nextStep();
-    //     } else {
-    //         await methods.handleSubmit(onSubmit)();
+    const { trigger } = methods;
+
+    const nextStep = async () => {
+        // Validate current step before proceeding
+        let isValid = false;
+
+        if (currentStep === 0) {
+            isValid = await trigger('serviceDetails', { shouldFocus: true });
+        } else if (currentStep === 1) {
+            isValid = await trigger('additionalDetails', { shouldFocus: true });
+        }
+
+        if (isValid && currentStep < totalSteps - 1) {
+            setCurrentStep(prev => prev + 1);
+        }
+    };
+
+    // const prevStep = () => {
+    //     if (currentStep > 0) {
+    //         setCurrentStep(prev => prev - 1);
     //     }
     // };
 
+    const onSubmit = (data: DatabaseServiceFormData) => {
+        setIsSubmitting(true);
+        // Simulate API call
+        console.log('Form submitted with data:', data);
+        setTimeout(() => {
+            setIsSubmitting(false);
+            alert('Database service created successfully!');
+        }, 1500);
+    };
+
     return (
-        <FormProvider {...methods}>
-            <div
-                style={{
-                    display: 'flex',
-                    width: '100%',
-                    flex: '1 1 0%',
-                    gap: '10px',
-                }}
-            >
-                <div style={{ display: 'block', width: '380px' }}>
-                    <Card>
-                        <ServiceProgress currentStep={currentStep} steps={steps} />
-                    </Card>
-                </div>
+        <Layout
+            title="Database Services"
+            pageHeading="Create New Database Service"
+            path="/services/database/create"
+        >
+            <FormProvider {...methods}>
                 <div
                     style={{
                         display: 'flex',
-                        paddingBottom: 'var(--tsl-spacing-large)',
                         width: '100%',
-                        flexDirection: 'column',
-                        alignItems: 'flex-start',
-                        gap: '20px',
+                        flex: '1 1 0%',
+                        gap: '10px',
                     }}
+                    className="tsl-service-wrapper"
                 >
-                    <ServiceDetailsStep />
-
-                    <AdditionalDetailsStep />
+                    <div style={{ display: 'block', minWidth: '300px' }}>
+                        <Card>
+                            <ServiceProgress
+                                currentStep={currentStep}
+                                steps={steps}
+                                onSubmit={onSubmit}
+                                isSubmitting={isSubmitting}
+                                nextStep={nextStep}
+                            />
+                        </Card>
+                    </div>
+                    <div
+                        style={{
+                            display: 'flex',
+                            paddingBottom: 'var(--tsl-spacing-large)',
+                            width: '100%',
+                            flexDirection: 'column',
+                            alignItems: 'flex-start',
+                            gap: '20px',
+                        }}
+                    >
+                        <ServiceDetailsStep />
+                        {currentStep == 1 && <AdditionalDetailsStep />}
+                    </div>
                 </div>
-            </div>
-        </FormProvider>
+            </FormProvider>
+        </Layout>
     );
 };
+
 // Wrapper component for ServiceDetails to use nested form fields
 const ServiceDetailsStep = () => {
     return <ServiceDetails />;

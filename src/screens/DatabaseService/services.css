@@ -4,3 +4,14 @@
     flex-direction: column;
     justify-content: space-between;
 }
+
+.tsl-service-wrapper {
+    display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    .tsl-service-wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}

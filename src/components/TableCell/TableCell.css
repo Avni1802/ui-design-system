@@ -1,0 +1,138 @@
+:root,
+:host {
+    /* Base table cell variables */
+    --tsl-table-cell-padding: var(--tsl-spacing-regular);
+    --tsl-table-cell-border-radius: var(--tsl-spacing-small);
+    --tsl-table-cell-border: none;
+    --tsl-table-cell-border-focus: 2px solid var(--tsl-border-focus);
+
+    /* Text content type */
+    --tsl-table-cell-text-color: var(--tsl-color-text-primary);
+    --tsl-table-cell-text-color-selected: var(--tsl-color-text-primary);
+
+    /* Number content type */
+    --tsl-table-cell-number-color: var(--tsl-color-text-primary);
+    --tsl-table-cell-number-color-selected: var(--tsl-color-text-primary);
+
+    /* Checkbox content type */
+    --tsl-table-cell-checkbox-bg: var(--tsl-color-surface-primary);
+    --tsl-table-cell-checkbox-border: 1px solid var(--tsl-border-subtle);
+
+    /* Actions/Link content type */
+    --tsl-table-cell-action-color: var(--tsl-color-text-brand);
+    --tsl-table-cell-action-color-hover: var(--tsl-color-brand-intense);
+
+    /* Density variants */
+    --tsl-table-cell-padding-expanded: var(--tsl-spacing-medium) var(--tsl-spacing-regular);
+    --tsl-table-cell-padding-compact: var(--tsl-spacing-small) var(--tsl-spacing-regular);
+
+    /* Selection state */
+    --tsl-table-cell-bg-selected: var(--tsl-color-brand-secondary);
+    --tsl-table-cell-bg-selected--hover: var(--tsl-color-brand-secondary-hover);
+
+    /* Stripes */
+    --tsl-table-cell-bg-stripe: var(--tsl-color-surface-secondary);
+
+    /* Divider */
+    --tsl-table-cell-divider: 1px solid var(--tsl-border-subtlest);
+}
+
+.tsl-table-cell {
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.tsl-table-cell-expanded {
+    min-height: 56px;
+}
+
+.tsl-table-cell-compact {
+    min-height: 40px;
+    padding: 0 12px;
+}
+
+.tsl-table-cell-selected {
+    background-color: var(--tsl-color-background-selected, rgba(37, 99, 235, 0.1));
+}
+
+.tsl-table-cell-striped:nth-child(odd) {
+    background-color: var(--tsl-color-background-subtle);
+}
+
+.tsl-table-cell-with-divider {
+    border-bottom: 1px solid var(--tsl-color-border, #e5e7eb);
+}
+
+.tsl-table-cell-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.tsl-table-cell-text h2 {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tsl-table-cell-text p {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tsl-table-cell-number {
+    justify-content: flex-end;
+}
+
+.tsl-table-cell-checkbox {
+    justify-content: center;
+}
+
+.tsl-table-cell-action {
+    justify-content: flex-start;
+}
+
+.tsl-table-cell-action-button {
+    background: none;
+    border: none;
+    color: var(--tsl-color-text-link, #2563eb);
+    cursor: pointer;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.tsl-table-cell-action-button:hover {
+    text-decoration: underline;
+}
+
+.tsl-table-cell-action-button:disabled {
+    color: var(--tsl-color-text-disabled, #9ca3af);
+    cursor: not-allowed;
+    text-decoration: none;
+}
+
+/* Alignment classes */
+.justify-left {
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.justify-right {
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.justify-center {
+    justify-content: center;
+    text-align: center;
+}

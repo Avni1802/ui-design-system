@@ -9,7 +9,7 @@
 .tsl-sidebar {
     width: var(--tsl-sidebar-width);
     padding: var(--tsl-spacing-medium);
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
@@ -17,6 +17,12 @@
     border-right: var(--tsl-sidebar-border-right);
     background-color: var(--tsl-sidebar-bg-color);
     height: 100svh;
+}
+
+@media screen and (min-width: 768px) {
+    .tsl-sidebar {
+        display: flex;
+    }
 }
 
 .tsl-sidebar-hidden {

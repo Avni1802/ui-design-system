@@ -1,3 +1,15 @@
+/**
+ * A container component for grouping related content.
+ *
+ * @example
+ * <Card
+ *   title="User Profile"
+ *   description="View and edit your profile information"
+ * >
+ *   <ProfileForm />
+ * </Card>
+ */
+
 import * as React from 'react';
 import './Card.css';
 

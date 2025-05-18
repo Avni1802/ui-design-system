@@ -1,3 +1,15 @@
+/**
+ * Grid and Layout System
+ * 
+ * Provides utility classes for common alignment patterns and
+ * predefined application layouts.
+ * 
+ * Includes:
+ * - Horizontal and vertical alignment helpers
+ * - Centering utilities
+ * - Three application layout grid templates with different column/row configurations
+ */
+
 .tsl-align-horizontally {
     display: flex;
     flex-direction: row;
