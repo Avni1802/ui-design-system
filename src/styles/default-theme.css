@@ -1,4 +1,16 @@
-/* Default theme tokens */
+/**
+ * Default Theme Tokens
+ * 
+ * Contains the base color palette variables that power the theming system.
+ * Defines raw color values for:
+ * - Primary and secondary colors with various intensity levels
+ * - Text colors including inverse options
+ * - Status colors (danger, success, warning)
+ * - Surface/background colors
+ * - Opacity variations
+ * 
+ * These raw values are referenced by semantic variables in color.css
+ */
 
 :root,
 :host {
@@ -73,7 +85,3 @@
 
     /* Miscellaneous */
 }
-
-/*
-   * While everything below can be edited, it is advised to leave them to default and edit the upper rule instead for easier maintenance.
-   */

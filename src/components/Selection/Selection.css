@@ -163,6 +163,18 @@
     top: 10%;
 }
 
+.tsl-selection-control-md.tsl-checkbox-control:not(.intermediate)::after {
+    content: '';
+    position: absolute;
+    display: none;
+    width: 30%;
+    height: 60%;
+    border: solid var(--tsl-color-text-inverse);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    top: 12%;
+}
+
 .tsl-selection-input:checked + .tsl-checkbox-control:not(.intermediate) {
     background-color: var(--tsl-checkbox-bg-color--checked);
     border: var(--tsl-checkbox-border--checked);

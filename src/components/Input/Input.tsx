@@ -1,3 +1,19 @@
+/**
+ * A flexible form input component that supports text, textarea, select, and password variants.
+ * @example
+ * Basic text input
+ * <Input label="Username" placeholder="Enter username" />
+ * Select input
+ * <Input
+ *   variant="select"
+ *   label="Country"
+ *   options={[
+ *     { value: "us", label: "United States" },
+ *     { value: "uk", label: "United Kingdom" }
+ *   ]}
+ * />
+ */
+
 import * as React from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { clsx } from 'clsx';

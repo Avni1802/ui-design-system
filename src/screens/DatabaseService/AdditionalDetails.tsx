@@ -3,16 +3,114 @@ import { Input } from '@/components/Input/Input';
 import { Selection, SelectionGroup } from '@/components/Selection';
 import { useFormContext, Controller } from 'react-hook-form';
 import { DatabaseServiceFormData } from '.';
+import { Link } from '@/components/Link';
+import { Table } from '@/components/Table/Table';
+import { CopyOutlined, EditOutlined, DeleteOutlined } from '@ant-design/icons';
+import { useState, useEffect } from 'react';
+
+const sampleData = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }];
+
+function RenderCompleteExample() {
+    const [selectedRows, setSelectedRows] = useState<Set<number>>(new Set());
+    const [sortColumn, setSortColumn] = useState<string>('id');
+    const [sortDirection, setSortDirection] = useState<'asc' | 'desc' | null>('asc');
+    const [data, setData] = useState([...sampleData]);
+
+    const handleSortChange = (columnId: string, direction: 'asc' | 'desc' | null) => {
+        setSortColumn(columnId);
+        setSortDirection(direction);
+
+        if (!direction) {
+            setData([...sampleData]); // Reset to original order
+            return;
+        }
+
+        const sortedData = [...sampleData].sort((a, b) => {
+            if (a[columnId as keyof typeof a] === b[columnId as keyof typeof b]) return 0;
+
+            const compareResult =
+                a[columnId as keyof typeof a] < b[columnId as keyof typeof b] ? -1 : 1;
+            return direction === 'asc' ? compareResult : -compareResult;
+        });
+
+        setData(sortedData);
+    };
+
+    return (
+        <Table
+            columns={[
+                {
+                    id: 'selection',
+                    headerType: 'selection',
+                    contentType: 'checkbox',
+                    width: '60px',
+                },
+                {
+                    id: 'id',
+                    title: 'ID',
+                    width: '80px',
+                    contentType: 'number',
+                    sortable: true,
+                },
+
+                {
+                    id: 'actions',
+                    title: 'Actions',
+                    width: '150px',
+                    renderCell: () => (
+                        <div style={{ display: 'flex', gap: '8px' }}>
+                            <Link
+                                href="::"
+                                label="Copy"
+                                showLeading
+                                iconLeading={<CopyOutlined />}
+                            />
+                            <Link
+                                href="::"
+                                label="Edit"
+                                showLeading
+                                iconLeading={<EditOutlined />}
+                            />
+                            <Link
+                                href="::"
+                                label="Delete"
+                                showLeading
+                                iconLeading={<DeleteOutlined />}
+                            />
+                        </div>
+                    ),
+                },
+            ]}
+            data={data}
+            selectedRows={selectedRows}
+            onRowSelectionChange={setSelectedRows}
+            sortColumn={sortColumn}
+            sortDirection={sortDirection}
+            onSortChange={handleSortChange}
+            density="expanded"
+            showStripes={true}
+            bordered={true}
+        />
+    );
+}
 
 const AdditionalDetails = () => {
     const {
         control,
         watch,
+        setValue,
         formState: { errors },
     } = useFormContext<DatabaseServiceFormData>();
     const additionalDetailsErrors = errors.additionalDetails || {};
 
     const windowPreference = watch('additionalDetails.windowPreference');
+
+    // Set default SLA value if not already set
+    useEffect(() => {
+        if (!watch('additionalDetails.sla')) {
+            setValue('additionalDetails.sla', 'standard', { shouldValidate: false });
+        }
+    }, [setValue, watch]);
 
     return (
         <Card title="Additional Details" description="Maintenance Window, Availability machine">
@@ -142,6 +240,7 @@ const AdditionalDetails = () => {
                     )}
                 />
             </div>
+            <RenderCompleteExample />
         </Card>
     );
 };

@@ -1,3 +1,17 @@
+/**
+ * Main Stylesheet
+ * 
+ * Entry point that imports all component stylesheets.
+ * Establishes base styles, resets, and utility classes.
+ * 
+ * Includes:
+ * - Box model reset
+ * - Base typography settings
+ * - Focus styles
+ * - Accessibility helpers
+ * - Flexbox utilities
+ * - Spacing and layout helpers
+ */
 @import url('./color.css');
 @import url('./default-theme.css');
 @import url('./grid.css');
@@ -69,6 +83,12 @@ textarea {
 .items-center {
     align-items: center;
 }
+.items-start {
+    align-items: flex-start;
+}
+.justify-between {
+    justify-content: space-between;
+}
 
 .justify-center {
     justify-content: center;
@@ -85,8 +105,11 @@ textarea {
 .gap-3 {
     gap: var(--tsl-spacing-semi-medium);
 }
-
 .gap-4 {
+    gap: var(--tsl-spacing-medium);
+}
+
+.gap-5 {
     gap: var(--tsl-spacing-large);
 }
 
@@ -101,4 +124,16 @@ html {
 }
 * {
     box-sizing: border-box;
+}
+
+.justify-left {
+    justify-content: flex-start;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-right {
+    justify-content: flex-end;
 }

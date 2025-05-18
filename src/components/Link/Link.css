@@ -44,6 +44,10 @@
     text-underline-position: from-font;
 }
 
+.tsl-link {
+    text-decoration-line: none;
+}
+
 /* Primary link */
 
 .tsl-link-color-primary {

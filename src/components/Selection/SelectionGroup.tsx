@@ -1,3 +1,16 @@
+/**
+ * A group of selection controls that can be managed together.
+ *
+ * @example
+ * <SelectionGroup
+ *   type="radio"
+ *   options={[
+ *     { label: "Option 1", value: "1" },
+ *     { label: "Option 2", value: "2" }
+ *   ]}
+ * />
+ */
+
 import * as React from 'react';
 import { clsx } from 'clsx';
 import { Selection } from './Selection';

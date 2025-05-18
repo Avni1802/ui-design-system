@@ -1,3 +1,16 @@
+/**
+ * Typography System
+ * 
+ * Defines the typographic foundation of the application including:
+ * - Font families (base, heading, monospace)
+ * - Font sizes (xs, sm, md, lg)
+ * - Font weights (regular, medium, semibold)
+ * - Line heights and letter spacing
+ * - Spacing variables
+ * 
+ * Includes utility classes for text headings, body text styles,
+ * and text color variations.
+ */
 :root,
 :host {
     /* Font families */
@@ -10,7 +23,7 @@
     --tsl-font-size-lg: 20px;
     --tsl-font-size-md: 15px;
     --tsl-font-size-sm: 13px;
-    --tsl-font-size-xs: 12px;
+    --tsl-font-size-xs: 11px;
 
     /* Font weights */
     --tsl-font-weight-regular: 450;
@@ -29,6 +42,7 @@
     --tsl-letter-spacing-dense: -0.1px;
 
     /* Spacing */
+    --tsl-spacing-extra-large: 48px;
     --tsl-spacing-large: 32px;
     --tsl-spacing--semi-large: 24px;
     --tsl-spacing-semi-medium: 12px;
@@ -105,6 +119,14 @@
 
 .tsl-text-color-subtler {
     color: var(--tsl-color-text-subtler);
+}
+
+.tsl-text-color-primary {
+    color: var(--tsl-color-text-primary);
+}
+
+.tsl-text-color-brand {
+    color: var(--tsl-color-text-brand);
 }
 
 .tsl-container {
