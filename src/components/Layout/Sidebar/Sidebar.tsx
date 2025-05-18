@@ -78,10 +78,6 @@ const Sidebar = React.forwardRef<HTMLButtonElement, SidebarProps>(
                         iconTrailing={<PushpinFilled />}
                     />
                 </nav>
-
-                <button className="tsl-sidebar-toggle-button" onClick={onToggleCollapse} ref={ref}>
-                    {collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
-                </button>
             </div>
         );
     }
