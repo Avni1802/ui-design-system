@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import { HomeOutlined, RightOutlined } from '@ant-design/icons';
 import { Link } from '@/components/Link';
-import './Navbar.css';
+import './navbar.css';
 
 interface BreadcrumbItem {
     label: string;

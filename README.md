@@ -31,11 +31,7 @@ yarn add tessell-design-system
 import { Button } from 'tessell-design-system';
 
 function App() {
-  return (
-    <Button variant="primary">
-      Click me
-    </Button>
-  );
+    return <Button variant="primary">Click me</Button>;
 }
 ```
 
@@ -49,12 +45,14 @@ function App() {
 ### Setup
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/your-username/tessell-design-system.git
 cd tessell-design-system
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 # or
@@ -62,6 +60,7 @@ yarn install
 ```
 
 3. Start the development server:
+
 ```bash
 npm run dev
 # or
@@ -83,6 +82,7 @@ yarn storybook
 This will start the Storybook server at `http://localhost:6006` by default.
 
 Key Storybook features:
+
 - 📚 Interactive component documentation
 - 🎨 Visual testing and development
 - 🔍 Component isolation
@@ -91,28 +91,31 @@ Key Storybook features:
 - 📝 Documentation with MDX
 
 To add a new component story:
+
 1. Create a new `.stories.tsx` file alongside your component
 2. Write stories using the Component Story Format (CSF)
 3. Add documentation using MDX if needed
 
 Example story:
+
 ```tsx
 import type { Meta, StoryObj } from '@storybook/react';
 import { Button } from './Button';
 
 const meta: Meta<typeof Button> = {
-  title: 'Components/Button',
-  component: Button,
-  tags: ['autodocs'],
+    title: 'Components/Button',
+    component: Button,
+    tags: ['autodocs'],
 };
 
 export default meta;
 type Story = StoryObj<typeof Button>;
 
 export const Primary: Story = {
-  args: {
-    variant: 'primary',
-    children: 'Button',
-  },
+    args: {
+        variant: 'primary',
+        children: 'Button',
+    },
 };
-``
+``;
+```
