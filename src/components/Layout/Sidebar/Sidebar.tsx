@@ -60,7 +60,7 @@ const Sidebar = React.forwardRef<HTMLButtonElement, SidebarProps>(
                     <MenuItem label="Benchmarks" showLeading iconLeading={<DashboardOutlined />} />
                     <MenuItem label="Servers" showLeading iconLeading={<CloudServerOutlined />} />
                 </nav>
-                <nav className="sidebar-footer">
+                <nav className="sidebar-footer w-full">
                     <MenuItem
                         label="Invite People"
                         size="sm"
