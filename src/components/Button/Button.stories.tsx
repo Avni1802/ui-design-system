@@ -2,6 +2,7 @@ import '../../styles/main.css';
 
 import { Meta, StoryObj } from '@storybook/react';
 import { Button } from './Button';
+import { ArrowRightOutlined, CloseOutlined, HomeOutlined, PlusOutlined } from '@ant-design/icons';
 
 const meta: Meta<typeof Button> = {
     title: 'Components/Button',
@@ -108,82 +109,18 @@ export const Sizes: Story = {
 export const WithIcons: Story = {
     render: () => (
         <div style={{ display: 'flex', gap: '16px' }}>
-            <Button
-                label="Leading Icon"
-                showLeading={true}
-                iconLeading={
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                    >
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                    </svg>
-                }
-            />
+            <Button label="Leading Icon" showLeading={true} iconLeading={<PlusOutlined />} />
             <Button
                 label="Trailing Icon"
                 showTrailing={true}
-                iconTrailing={
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                    >
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
-                }
+                iconTrailing={<ArrowRightOutlined />}
             />
             <Button
                 label="Both Icons"
                 showLeading={true}
                 showTrailing={true}
-                iconLeading={
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                    >
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                    </svg>
-                }
-                iconTrailing={
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                    >
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
-                }
+                iconLeading={<PlusOutlined />}
+                iconTrailing={<ArrowRightOutlined />}
             />
         </div>
     ),
@@ -193,66 +130,12 @@ export const WithIcons: Story = {
 export const IconOnly: Story = {
     render: () => (
         <div style={{ display: 'flex', gap: '16px' }}>
-            <Button
-                iconOnly={true}
-                icon={
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                    >
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                    </svg>
-                }
-                aria-label="Search"
-            />
-            <Button
-                variant="secondary"
-                iconOnly={true}
-                icon={
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                    >
-                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                    </svg>
-                }
-                aria-label="Home"
-            />
+            <Button iconOnly={true} icon={<HomeOutlined />} aria-label="Search" />
+            <Button variant="secondary" iconOnly={true} icon={<HomeOutlined />} aria-label="Home" />
             <Button
                 variant="tertiary"
                 iconOnly={true}
-                icon={
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                    >
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                    </svg>
-                }
+                icon={<CloseOutlined />}
                 aria-label="Close"
             />
         </div>

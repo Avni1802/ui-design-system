@@ -1,6 +1,6 @@
 # Tessell Design System
 
-A modern design system built with React and Vite, providing a collection of reusable components, patterns, and guidelines for building consistent user interfaces.
+Tessell Design System—a React-based component library built with scalability, developer experience, and design handoff in mind.
 
 ## Overview
 
